@@ -1,133 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-    
-        <title>Random Number Generator</title>
-        
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
-        
-        <style type="text/css">
-            
-            body {
-                margin:0px;
-                padding:0px;
-                background-color:#f2f2f2;
-            }
-        
-            #header {
-                height: 300px;
-                width: 100%;
-                background-color: black;
-                border-bottom: 7px #d3d3d3 solid;
-                text-align: center;
-            }
-            
-            #header-text {
-                height: 300px;
-                width: 100%;
-                color: white;
-                position: absolute;
-                font-family: 'Oswald', sans-serif;
-                font-weight: bold;
-                font-size: 400%;
-                text-align: center;
-            }
-            
-            .text {
-                margin: 150px auto;
-                font-family: 'Noto Serif SC', serif;
-                text-align: center;
-            }
-            
-            .center {
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-            
-            #return {
-                text-align: center;
-                margin: 150px auto;
-            }
-            
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            
-            a:hover {
-                text-decoration: underline;
-                color: darkgrey;
-            }
-            
-            #generator {
-                background-color: white;
-                border: 2px black solid;
-                color: black;
-                padding: 5px;
-                font-family: 'Noto Serif SC', serif;
-                font-weight: bold;
-                font-size: 125%;
-            }
-            
-            #generator:hover {
-                box-shadow:  0 0 2px 1px rgba(0, 140, 186, 0.5);
-            }
-            
-            #generated-text {
-                font-family: 'Noto Serif SC', serif;
-                font-weight: bold;
-                font-size: 90%;
-            }
-            
-        </style>
-    
-    </head>
-    
-    <body>
-        
-        <div id="header">
-        
-            <p id="header-text">Random Number Generator</p>
-        
-        </div>
-        
-        <div class="text">
-        
-            <p>This is a custom created Random Number Generator, which generates a random number between 0-10.</p>
-        
-        </div>
-        
-        <div class="center">
-            <button id="generator">Generate random number</button>
-            <p id="generated-text">Random number:</p>
-        </div>
-        
-        <div id="return">
-        
-            <a href="index.html"><p class="text">Return to the main page</p></a>
-            
-        </div>
-        
-        <script type="text/javascript">
-            
-            var string = document.getElementById("generated-text").innerHTML;
-        
-            document.getElementById("generator").onclick = function() {
-                
-                var random = Math.floor(Math.random() * 11); 
-                var newString = string + " " + random;
-                
-               document.getElementById("generated-text").innerHTML = newString;
-                
-               
-                
-            }
-        
-        </script>
-    
-    </body>
+<head>
+
+    <title>Random Number Generator</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+
+    <link rel="stylesheet" href="generator-styles.css">
+</head>
+
+<body>
+
+
+<div id="header">
+
+    <p id="header-text">Random Number Generator</p>
+
+</div>
+
+<div class="text">
+
+    <p>This is a custom created Random Number Generator, which generates a random number between 0-10.</p>
+
+</div>
+
+<div class="center">
+    <button id="generator">Generate random number</button>
+    <p id="generated-text">Random number:</p>
+</div>
+
+<script src="generatorScript.js"></script>
+
+<div id="return">
+
+    <a href="index.html"><p class="text">Return to the main page</p></a>
+
+</div>
+</body>
 
 </html>
