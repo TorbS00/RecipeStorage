@@ -1,13 +1,21 @@
 package com.github.torbs00.recipestorage.repository.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Value;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
-@Value
-@AllArgsConstructor
+@Data
+@JsonIgnoreProperties("id")
 public class RecipeData {
-    String name;
-    String description;
-    String ingredients;
-    String directions;
+
+    private static int counter = 1;
+
+    @JsonIgnore
+    private int id = counter++;
+
+    private String name;
+    private String[] description;
+    private String[] ingredients;
+    private String[] steps;
+
 }
