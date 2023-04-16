@@ -30,7 +30,6 @@ body {
     transition: .5s ease;
 }
 
-
 #h-container:hover .h-overlay {
     bottom: 0;
     height: 100%;
